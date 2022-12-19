@@ -1,0 +1,135 @@
+name: qq_music
+description: 一款仿照qq音乐的界面，网易云内容的音乐播放器（个人练习flutter使用）
+
+# The following line prevents the package from being accidentally published to
+# pub.dev using `flutter pub publish`. This is preferred for private packages.
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+# The following defines the version and build number for your application.
+# A version number is three numbers separated by dots, like 1.2.43
+# followed by an optional build number separated by a +.
+# Both the version and the builder number may be overridden in flutter
+# build by specifying --build-name and --build-number, respectively.
+# In Android, build-name is used as versionName while build-number used as versionCode.
+# Read more about Android versioning at https://developer.android.com/studio/publish/versioning
+# In iOS, build-name is used as CFBundleShortVersionString while build-number is used as CFBundleVersion.
+# Read more about iOS versioning at
+# https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
+# In Windows, build-name is used as the major, minor, and patch parts
+# of the product and file versions while build-number is used as the build suffix.
+version: 1.0.1+2
+
+environment:
+  sdk: '>=2.18.5 <3.0.0'
+
+# Dependencies specify other packages that your package needs in order to work.
+# To automatically upgrade your package dependencies to the latest versions
+# consider running `flutter pub upgrade --major-versions`. Alternatively,
+# dependencies can be manually updated by changing the version numbers below to
+# the latest version available on pub.dev. To see which dependencies have newer
+# versions available, run `flutter pub outdated`.
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  cupertino_icons: ^1.0.2
+  dio: ^4.0.6 #网络请求
+  get: ^4.6.5 #getx
+  event_bus: ^2.0.0 # 事件总线
+  path_provider: ^2.0.11 #获取目录
+  font_awesome_flutter: ^10.2.1 #图标库
+  flutter_svg: ^1.1.6 #加载svg
+  google_fonts: ^3.0.1 #字体
+  card_swiper: ^2.0.4 #滑动图
+  loading_indicator: ^3.1.0 #加载器
+  logger: ^1.1.0 #日志
+  bruno: ^3.1.0 #贝壳组件库，网址https://bruno.ke.com/page/guide/start
+  extended_image: ^6.3.2 #扩展图片库
+  flutter_easyloading: ^3.0.3 #加载弹窗组件
+  shared_preferences: ^2.0.15 #本地数据存储
+  device_info_plus: ^8.0.0 #获取设备信息
+  local_notifier: ^0.1.5 #用于本地通知
+  auto_size_text: ^3.0.0 #自动字体
+  scrollable_positioned_list: ^0.3.2 #使用类似于ListView 支持跳转到指定位置
+  sleek_circular_slider: ^2.0.1 #圆形加载器
+  text_scroll: ^0.1.1  #滚动字体
+  syncfusion_flutter_sliders: ^20.3.59 #自定义滑块
+  syncfusion_flutter_core: ^20.3.59 #核心包和上面一起的
+  styled_widget: ^0.4.1
+  filesize: ^2.0.1 #文件大小
+  animate_do: ^3.0.2 #动画组件
+  animated_text_kit: ^4.2.2 #动画字体
+##############桌面端插件################
+  audioplayers: ^1.1.1 #音乐播放器
+  dart_vlc: ^0.4.0 #桌面端视频播放插件
+  tray_manager: ^0.2.0 #系统托盘
+  launch_at_startup: ^0.2.0 #开机自启动
+  desktop_drop: ^0.4.0 #拖拽文件道程序
+  desktop_multi_window: ^0.2.0 #多窗口插件,容易暴毙
+  window_manager: ^0.2.7 #窗口管理
+  file_selector: ^0.9.2+2 # 桌面端打开系统文件和保存
+  just_the_tooltip: ^0.0.12 #指定菜单指示器
+  hotkey_manager: ^0.1.7 #热键管理
+  windows_single_instance: ^0.1.5 #  将 Windows 应用限制为一次只能打开一个实例。
+  desktop_context_menu: ^0.1.1 #在光标位置打开上下文菜单的插件
+  dart_tags: ^0.4.0 #ID3标签信息编解码库
+  msix: ^3.7.0 #构建打包
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  # The "flutter_lints" package below contains a set of recommended lints to
+  # encourage good coding practices. The lint set provided by the package is
+  # activated in the `analysis_options.yaml` file located at the root of your
+  # package. See that file for information about deactivating specific lint
+  # rules and activating additional ones.
+  flutter_lints: ^2.0.0
+
+# For information on the generic Dart part of this file, see the
+# following page: https://dart.dev/tools/pub/pubspec
+
+# The following section is specific to Flutter packages.
+flutter:
+
+  # The following line ensures that the Material Icons font is
+  # included with your application, so that you can use the icons in
+  # the material Icons class.
+  uses-material-design: true
+
+  # To add assets to your application, add an assets section, like this:
+  assets:
+    - images/
+  #   - images/a_dot_ham.jpeg
+
+  # An image asset can refer to one or more resolution-specific "variants", see
+  # https://flutter.dev/assets-and-images/#resolution-aware
+
+  # For details regarding adding assets from package dependencies, see
+  # https://flutter.dev/assets-and-images/#from-packages
+
+  # To add custom fonts to your application, add a fonts section here,
+  # in this "flutter" section. Each entry in this list should have a
+  # "family" key with the font family name, and a "fonts" key with a
+  # list giving the asset and other descriptors for the font. For
+  # example:
+  fonts:
+    - family: iconfont
+      fonts:
+        - asset: images/icon/iconfont.ttf
+
+  #   - family: Trajan Pro
+  #     fonts:
+  #       - asset: fonts/TrajanPro.ttf
+  #       - asset: fonts/TrajanPro_Bold.ttf
+  #         weight: 700
+  #
+  # For details regarding fonts from package dependencies,
+  # see https://flutter.dev/custom-fonts/#from-packages
+msix_config:
+  display_name: xl_music  #显示的名字
+  publisher_display_name: xl #作者的名字
+  identity_name: com.xl.music #唯一签名
+  msix_version: 1.0.0.0 #版本号
+  logo_path: F:\Android.workspace\qq_music\images\app_icon.png #图标地址
