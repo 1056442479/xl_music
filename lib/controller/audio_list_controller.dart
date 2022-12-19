@@ -1,6 +1,7 @@
 
 import 'package:qq_music/model/song/song_list_details.dart';
 
+
 class AudioListController {
 
   ///播放音乐列表
